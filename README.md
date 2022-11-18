@@ -6,3 +6,4 @@ A template repository for creating games for the Devcade arcade system.
 - An initiallized monogame project
 - The Devcade library intalled
 - Resolution setting and basic controls updating
+- Build scripts for publishing and packing games
