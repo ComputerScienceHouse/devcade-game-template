@@ -10,13 +10,13 @@ A template repository for creating games for the Devcade arcade system.
 
 ### Building with build scripts
 
-####For Linux / Mac
+For Linux / Mac
 
 ```sh
 . ./publish.bash [Path to banner] [Path to icon]
 ```
 
-####For Windows
+For Windows
 
 ```sh
 ./publish.ps1 [Path to banner] [Path to icon]
