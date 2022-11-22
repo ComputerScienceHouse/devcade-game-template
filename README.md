@@ -33,3 +33,4 @@ The scripts will create a ZIP file in the project directory with the same name a
 - The window size set to the devcade display size
 - XML comments on all methods, classes, and constructors
 - Commented example of how to load and draw content
+- Standardized devcade controls for exiting games
