@@ -26,11 +26,3 @@ If arguments are not provided, the script will search for them in the top level 
 In both cases, the banner and icon must be called 'banner' and 'icon' respectively. The scripts copy these files to your project directory, so running them without args after the first time will always find the banner and icon.
 
 The scripts will create a ZIP file in the project directory with the same name as the containing folder.
-
-## What it Provides
-
-- The devcade library NuGet package, pre-initialized
-- The window size set to the devcade display size
-- XML comments on all methods, classes, and constructors
-- Commented example of how to load and draw content
-- Standardized devcade controls for exiting games
