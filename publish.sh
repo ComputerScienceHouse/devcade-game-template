@@ -4,10 +4,6 @@
 CORRECT_B_W=800
 CORRECT_B_H=450
 
-# Correct dimensions for icon
-CORRECT_I_W=128
-CORRECT_I_H=128
-
 WORK_DIR=/tmp/devcade_publishing_script_temp
 #ZIP_NAME=devcade-publishing-script-output # Oops actually it has to be the name of the game.
 
@@ -50,8 +46,8 @@ function validate_images() {
 		exit 1
 	fi
 
-	if [[ "$ICON_WIDTH" != "$CORRECT_I_W" || "$ICON_HEIGHT" != "$CORRECT_I_H" ]]; then
-		echo "Error: Icon dimensions must be $CORRECT_I_W x $CORRECT_I_H!"
+	if [[ "$ICON_WIDTH" != "$ICON_HEIGHT" ]]; then
+		echo "Error: Icon dimensions must be square!"
 		exit 1
 	fi
 }
