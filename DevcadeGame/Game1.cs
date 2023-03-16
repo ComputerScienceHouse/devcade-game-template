@@ -3,13 +3,19 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Devcade;
 
+// MAKE SURE YOU RENAME ALL PROJECT FILES FROM DevcadeGame TO YOUR YOUR GAME NAME
 namespace DevcadeGame
 {
 	public class Game1 : Game
 	{
 		private GraphicsDeviceManager _graphics;
 		private SpriteBatch _spriteBatch;
-
+		
+		/// <summary>
+		/// Stores the window dimensions in a rectangle object for easy use
+		/// </summary>
+		private Rectangle windowSize;
+		
 		/// <summary>
 		/// Game constructor
 		/// </summary>
@@ -21,11 +27,12 @@ namespace DevcadeGame
 		}
 
 		/// <summary>
-		/// Does any setup prior to the first frame that doesn't need loaded content.
+		/// Performs any setup that doesn't require loaded content before the first frame.
 		/// </summary>
 		protected override void Initialize()
 		{
-			Input.Initialize(); // Sets up the input library
+			// Sets up the input library
+			Input.Initialize();
 
 			// Set window size if running debug (in release it will be fullscreen)
 			#region
@@ -42,19 +49,21 @@ namespace DevcadeGame
 			
 			// TODO: Add your initialization logic here
 
+			windowSize = GraphicsDevice.Viewport.Bounds;
+			
 			base.Initialize();
 		}
 
 		/// <summary>
-		/// Does any setup prior to the first frame that needs loaded content.
+		/// Performs any setup that requires loaded content before the first frame.
 		/// </summary>
 		protected override void LoadContent()
 		{
 			_spriteBatch = new SpriteBatch(GraphicsDevice);
 
 			// TODO: use this.Content to load your game content here
-			// ex.
-			// texture = Content.Load<Texture2D>("fileNameWithoutExtention");
+			// ex:
+			// texture = Content.Load<Texture2D>("fileNameWithoutExtension");
 		}
 
 		/// <summary>
@@ -65,9 +74,9 @@ namespace DevcadeGame
 		{
 			Input.Update(); // Updates the state of the input library
 
-			// Exit when both menu buttons are pressed (or escape for keyboard debuging)
+			// Exit when both menu buttons are pressed (or escape for keyboard debugging)
 			// You can change this but it is suggested to keep the keybind of both menu
-			// buttons at once for gracefull exit.
+			// buttons at once for a graceful exit.
 			if (Keyboard.GetState().IsKeyDown(Keys.Escape) ||
 				(Input.GetButton(1, Input.ArcadeButtons.Menu) &&
 				Input.GetButton(2, Input.ArcadeButtons.Menu)))
@@ -87,9 +96,11 @@ namespace DevcadeGame
 		protected override void Draw(GameTime gameTime)
 		{
 			GraphicsDevice.Clear(Color.CornflowerBlue);
-
+			
+			// Batches all the draw calls for this frame, and then performs them all at once
 			_spriteBatch.Begin();
 			// TODO: Add your drawing code here
+			
 			_spriteBatch.End();
 
 			base.Draw(gameTime);
