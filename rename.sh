@@ -6,7 +6,7 @@ then
     cd $2
     mv $1.csproj $2.csproj
     mv $1.sln $2.sln
-    sed -i "s/${1}/${2}/g" $1.sln Program.cs app.manifest
+    sed -i "s/${1}/${2}/g" $2.sln Program.cs app.manifest
     sed -i "/namespace/s/${1}/${2}/g" Game1.cs
 else
     mv DevcadeGame $1
