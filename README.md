@@ -15,6 +15,8 @@ Next, create a new repository using this template on GitHub, and clone your new 
 Once you have a local copy of the repository, open the project in your code editor of choice. 
 Make sure to rename all the `.sln` and `.csproj` file from `DevcadeGame` to the name of your game. After that, you are all set.
 
+A script is included to simplify this process. Run `./rename.sh YourGameName` or `./rename.sh CurrentGameName NewGameName` to rename your project.
+
 ### Building with build scripts
 
 For Linux / Mac
