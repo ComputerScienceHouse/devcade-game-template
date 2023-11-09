@@ -33,6 +33,7 @@ namespace DevcadeGame
 		{
 			// Sets up the input library
 			Input.Initialize();
+			//Persistence.Init(); Uncomment if using the persistence section for save and load
 
 			// Set window size if running debug (in release it will be fullscreen)
 			#region
