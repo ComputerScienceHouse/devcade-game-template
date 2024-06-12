@@ -6,6 +6,20 @@ using Devcade;
 // MAKE SURE YOU RENAME ALL PROJECT FILES FROM DevcadeGame TO YOUR YOUR GAME NAME
 namespace DevcadeGame
 {
+	/// <summary>
+	/// Enum storing the different possible states the game can be in
+	/// This can be used for making a game menu
+	/// Feel free to modify this as needed
+	/// </summary>
+	public enum GameStates
+	{
+		Menu,
+		Playing,
+		Paused,
+		Win,
+		GameOver
+	}
+	
 	public class Game1 : Game
 	{
 		private GraphicsDeviceManager _graphics;
