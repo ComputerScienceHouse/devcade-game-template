@@ -74,7 +74,7 @@ function package_game() {
 	mkdir -p $WORK_DIR 
 
 	# Copy assets to temporary directory
-	PUB="$GAME/bin/Release/net6.0/linux-x64/publish"
+	PUB="$GAME/bin/Release/net10.0/linux-x64/publish"
 
 	cp -r $BANNER $ICON $PUB $WORK_DIR
 

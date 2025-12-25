@@ -17,7 +17,7 @@ if ($args.Length -eq 2) {
 
     if (Test-Path $icon_path -PathType Leaf) {
         echo "Icon found. Moving to root directory"
-        Copy-Item $banner_path -Destination "."
+        Copy-Item $icon_path -Destination "."
     } else {
         echo "No file found at icon path"
         exit 1
@@ -82,7 +82,7 @@ if (Test-Path "./publish" -PathType Container) {
     Remove-Item "./publish"
 }
 
-Move-Item "./bin/Release/net6.0/linux-x64/publish" "./"
+Move-Item "./bin/Release/net10.0/linux-x64/publish" "./"
 
 Write-Host "Zipping..." -NoNewline
 Compress-Archive -Path "./publish", $banner_path, $icon_path -DestinationPath "$basename.zip"
