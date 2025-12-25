@@ -45,3 +45,17 @@ If arguments are not provided, the script will search for them in the top level 
 In both cases, the banner and icon must be called 'banner' and 'icon' respectively. The scripts copy these files to your project directory, so running them without args after the first time will always find the banner and icon.
 
 The scripts will create a ZIP file in the project directory with the same name as the containing folder.
+
+### Building and Running with `dotnet`
+
+For testing or development, you can also build and run the project without the scripts.
+
+#### Build the project
+ ```sh 
+ dotnet build
+ ```
+ 
+#### Run the game
+```sh
+dotnet run
+```
