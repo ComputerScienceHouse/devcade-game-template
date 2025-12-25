@@ -17,6 +17,16 @@ Make sure to rename all the `.sln` and `.csproj` file from `DevcadeGame` to the 
 
 A script is included to simplify this process. Run `./rename.sh YourGameName` or `./rename.sh CurrentGameName NewGameName` to rename your project.
 
+### Recommended Tools
+
+#### Tiled
+- Website: https://www.mapeditor.org/
+- Purpose: 2D level editor for creating tile maps and game content.
+  
+#### BFXR
+- Website: https://www.bfxr.net/
+- Purpose: Sound effects creation software.
+
 ### Building with build scripts
 
 For Linux / Mac
